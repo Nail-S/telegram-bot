@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: telegram-bot
+  ai:
+    openai:
+      api-key: ${OPENAI_FOR_JAVA_DEVELOPERS}
+      chat:
+        options:
+          model: gpt-5-mini
+          temperature: 1.0
+  threads:
+    virtual:
+      enabled: true
+telegram:
+  token: ${TELEGRAM_BOT_TOKEN}
+  bot-name: ${TELEGRAM_BOT_NAME}
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: DEBUG
